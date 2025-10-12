@@ -1,0 +1,44 @@
+.CreateBook{
+    display: flex;
+    justify-content: center;
+   
+}
+.CreateBook .CreateBookRow{
+    box-shadow: var(--boxShadow);
+    padding: 20px;
+    padding-inline: 50px;
+    padding-block: 30px;
+    border-radius: 10px;
+
+}
+.CreateBookRow h6{
+    font-weight: 800;
+    font-size: 30px;
+    text-align: center;
+}
+.CreateBook .CreateBookRow .CreateBookBox input{
+    width: 100%;
+    border: none;
+    margin-block: 10px;
+    outline:none;
+    border-bottom: 0.1px solid #000;
+    padding: 15px;
+    font-weight: 800;
+    font-size: 18px;
+}
+.CreateBookBox input::placeholder{
+    color: #423c3c;
+}
+
+.CreateBook .Btn{
+    width: 100%;
+    padding: 5px 15px;
+    background: var(--main);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 99px;
+    font-size: 17px;
+    line-height: 24px;
+}

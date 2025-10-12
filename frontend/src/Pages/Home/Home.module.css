@@ -1,3 +1,19 @@
+/* For adding a new book */
+.AddingBook{
+    display: flex;
+    padding-inline: 210px;
+    margin-block: 30px;
+}
+.AddingBook span{
+    font-weight: 800;
+    color: var(--main);
+    margin-top: 13px;
+}
+.AddingBook .AddIcon{
+    margin-top: 10px;
+    color: var(--main);
+    font-size: 25px;
+}
 
 /* for BooksMain */
 

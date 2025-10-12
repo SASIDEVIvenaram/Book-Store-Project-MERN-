@@ -7,6 +7,8 @@ import styles from './Home.module.css'
 import { MdEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
 import { FaInfoCircle } from "react-icons/fa";
+import { IoMdAddCircle } from "react-icons/io";
+
 
 import { Link } from "react-router-dom";
 
@@ -27,6 +29,14 @@ const Home=()=>{
     },[])
     return(
         <>
+        {/* For adding a new book */}
+
+        <div className={styles.AddingBook}>
+            <span>Add a new book</span>
+            <Link to={'/Create'}>
+            <IoMdAddCircle className={styles.AddIcon}/>
+            </Link>
+        </div>
 
         {
             loading?(''):(
