@@ -8,6 +8,8 @@ import { MdEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
 import { FaInfoCircle } from "react-icons/fa";
 
+import { Link } from "react-router-dom";
+
 const Home=()=>{
     const [books,setBooks]=useState([]);
     const [loading,setLoading]=useState(false);
@@ -25,41 +27,46 @@ const Home=()=>{
     },[])
     return(
         <>
-        <div className={styles.CustomMess}>
-            <h6>MERN Book Store</h6>
-        </div>
 
         {
             loading?(''):(
-                books.map((Item)=>(
-                            <div className={styles.BooksMain} key={Item.id}>
+                
+                            <div className={styles.BooksMain}>
                                 <div className={styles.BooksMainRow}>
-                                    <div className={styles.BooksBox}>
-                                        <h6>{Item.BookTitle}</h6>
-                                        <h5>{Item.BookAuthor}</h5>
-                                        <div>
-                                            <p>Price: ₹ {Item.BookPrice}</p>
-                                            <p>Publish Year: {Item.BookPublishYear}</p>
+                                    {books.map((Item)=> (
+                                        <div className={styles.BooksBox} key={Item.id}>
+                                        <h6>Name: <span>{Item.BookTitle}</span></h6>
+                                        <h5>Author: <span>{Item.BookAuthor}</span></h5>
+                                        <div className={styles.CustomBox}>
+                                            <p>Price: ₹ <span>{Item.BookPrice}</span></p>
+                                            <p>Publish Year: <span>{Item.BookPublishYear}</span></p>
                                         </div>
                                         
                                         {/* For Icons */}
 
-                                        <div>
+                                        <div className={styles.IconsBox}>
                                             {/* For Info */}
+                                            <Link to={"/"}>
                                             <FaInfoCircle/>
+                                            </Link>
 
                                             {/* To delete */}
+                                            <Link to={"/"}>
                                             <MdDelete/>
+                                            </Link>
 
                                             {/* To edit */}
+                                            <Link to={"/"}>
                                             <MdEdit/>
-                                            
+                                            </Link>
                                             
                                         </div>
                                     </div>
+                                    ))
+                                }
                                 </div>
                             </div>
-                ))
+                
             )
         }
 

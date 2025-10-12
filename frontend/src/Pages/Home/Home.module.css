@@ -1,8 +1,62 @@
-.CustomMess{
-    text-align: center;
-    margin-block: 100px;
+
+/* for BooksMain */
+
+.BooksMain{
+    padding-inline: 120px;
 }
-.CustomMess h6{
+
+.BooksMain .BooksMainRow {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    gap: 2rem; /* space between cards */
+}
+
+.BooksBox{
+    box-shadow: var(--boxShadow);
+    padding-inline: 40px;
+    padding-block: 30px;
+    height: max-content;
+    border-radius: 10px;
+}
+.BooksBox:hover{
+    box-shadow: var(--boxShadowHover);
+    transform: scale(1.02);
+}
+.BooksBox h6{
     font-weight: 800;
-    font-size: 80px;
+    font-size: 25px;
+}
+.BooksBox h6 span,
+.BooksBox h5 span{
+    color: var(--main);
+    font-weight: 900;
+
+}
+.BooksBox h5 {
+    font-weight: 800;
+    font-size: 20px;
+    margin-block: 10px;
+}
+.BooksBox .CustomBox{
+    display: flex;
+    margin-bottom: 10px;
+    gap: 15px;
+}
+.BooksBox .CustomBox p{
+    font-weight: 800;
+    font-size: 15px;
+    border-bottom: 0.1px dashed #000;
+}
+.BooksBox .CustomBox p span{
+    color: var(--main);
+    border-bottom: 0.1px dashed var(--main) !important;
+}
+.BooksBox .IconsBox{
+    display: flex;
+    justify-content: space-between;
+    max-width: 100px;
+}
+.BooksBox .IconsBox a{
+    color: #000;
+    font-size: 20px;
 }
