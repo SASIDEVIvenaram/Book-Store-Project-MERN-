@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+
+:root {
+  --main: #ff0000;
+  --boxShadow: 10px 10px 10px -10px rgba(116, 81, 5, 0.831), 
+               inset 10px 10px 10px -10px rgba(67, 58, 2, 0.6);
+  --boxShadowHover: 30px 30px 30px -30px rgba(103, 86, 16, 0.8), 
+                    inset 40px 40px 40px -40px rgba(97, 71, 10, 0.9);
+}
+
+
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing:border-box;
+    font-family: 'Cinzel Decorative', serif;
+}
+
+*::selection{
+    background: var(--main);
+    color: #000;
+}
