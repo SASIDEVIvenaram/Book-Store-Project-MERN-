@@ -44,7 +44,7 @@ const Home=()=>{
                             <div className={styles.BooksMain}>
                                 <div className={styles.BooksMainRow}>
                                     {books.map((Item)=> (
-                                        <div className={styles.BooksBox} key={Item.id}>
+                                        <div className={styles.BooksBox} key={Item._id}>
                                         <h6>Name: <span>{Item.BookTitle}</span></h6>
                                         <h5>Author: <span>{Item.BookAuthor}</span></h5>
                                         <div className={styles.CustomBox}>
@@ -61,7 +61,7 @@ const Home=()=>{
                                             </Link>
 
                                             {/* To delete */}
-                                            <Link to={"/"}>
+                                            <Link to={`/Delete/${Item._id}`}>
                                             <MdDelete/>
                                             </Link>
 

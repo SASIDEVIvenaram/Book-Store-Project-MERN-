@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './Create.module.css'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
+import {useSnackbar } from 'notistack'
 const Create=()=>{
 
     const [BookTitle,setTitle]=useState('');
@@ -12,20 +12,20 @@ const Create=()=>{
     const [Loading,setLoading]=useState(false);
 
     const navigate=useNavigate();
-
+    const {enqueueSnackbar}=useSnackbar();
     const SaveBook=() => {
         const data={BookTitle, BookAuthor, BookPrice, BookPublishYear,};
         setLoading(true);
         axios.post("http://localhost:5555/Books/",data).then(()=>
         {
             setLoading(false);
-            alert("Book Created");
+            enqueueSnackbar("Book Created",{variant:'success'});
             navigate('/');
         }).catch((error)=>{
             setLoading(false);
             // console.log(error);
             // alert("check");
-            
+            enqueueSnackbar("Something Went Wrong Check Console",{variant:'error'});
             if(error.response)
             {
                 console.error("Response Data",error.response.data);
@@ -41,7 +41,7 @@ const Create=()=>{
             else{
                 console.log("Error",error.message);
             }
-            alert("Check console for detailed error message");
+
         })
 
     }
