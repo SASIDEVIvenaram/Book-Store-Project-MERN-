@@ -56,7 +56,7 @@ const Home=()=>{
 
                                         <div className={styles.IconsBox}>
                                             {/* For Info */}
-                                            <Link to={"/"}>
+                                            <Link to={`/View/${Item._id}`}>
                                             <FaInfoCircle/>
                                             </Link>
 
@@ -66,7 +66,7 @@ const Home=()=>{
                                             </Link>
 
                                             {/* To edit */}
-                                            <Link to={"/"}>
+                                            <Link to={`/Update/${Item._id}`}>
                                             <MdEdit/>
                                             </Link>
                                             

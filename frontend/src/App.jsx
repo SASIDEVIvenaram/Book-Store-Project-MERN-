@@ -6,7 +6,8 @@ import Delete from './Pages/Delete/Delete.jsx';
 import NavBar from './Layout/Navbar/NavBar.jsx';
 import Home from './Pages/Home/Home.jsx';
 import Create from './Pages/Create/Create.jsx';
-
+import Update from './Pages/Update/Update.jsx';
+import View from './Pages/View/View.jsx';
 function App() {
   return (
     <Routes>
@@ -28,7 +29,20 @@ function App() {
           <Delete />
         </>
       } />
+      <Route path='/Update/:id' element={
+        <>
+          <NavBar />
+          <Update />
+        </>
+      } />
+      <Route path='/View/:id' element={
+        <>
+          <NavBar />
+          <View />
+        </>
+      } />
     </Routes>
+    
   );
 }
 
