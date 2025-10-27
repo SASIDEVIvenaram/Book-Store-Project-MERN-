@@ -3,7 +3,7 @@ import styles from './NavBar.module.css';
 const NavBar=()=>{
     return(
         <div className={styles.CustomMess}>
-            <h6>MERN Book Store</h6>
+            <h6>Book Store</h6>
         </div>
     )
 }

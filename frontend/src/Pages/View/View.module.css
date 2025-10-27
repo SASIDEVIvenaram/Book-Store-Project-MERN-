@@ -1,0 +1,97 @@
+.ViewBook{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;             /* limits height to viewport */
+    overflow-y: auto;         /* adds scroll if content exceeds box */
+
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px;
+
+
+}
+.ViewBook .ViewBookRow{
+    box-shadow: var(--boxShadow);
+    padding-inline: 50px;
+    padding-block: 50px;
+    padding-bottom: 60px;
+    border-radius: 10px;
+    width: max-content;
+    height: max-content;
+    position: relative;
+    border: 0;
+
+}
+.ViewBookRow h6{
+    font-weight: 800;
+    font-size: 17px;
+
+}
+.ViewBookRow h6 span{
+    border-bottom: 0.1px dashed var(--main);
+    color:var(--main)
+}
+.ViewBookRow h5{
+    font-weight: 800;
+    margin-block: 10px;
+    font-size: 25px;
+
+}
+.ViewBookRow h5 span{
+    color: var(--main);
+    font-weight: 800;
+    font-size: 32px;
+    border-bottom: 0.1px dashed var(--main);
+}
+.ViewBookRow h4{
+    font-weight: 800;
+    margin-block: 10px;
+    font-size: 22px;
+}
+.ViewBookRow h4 span{
+    font-weight: 800;
+    font-size:23px;
+    color:var(--main);
+    border-bottom: 0.1px dashed var(--main);
+}
+
+.ViewBookRow .CustomDiv{
+    display: flex;
+    gap: 20px;
+    margin-block: 10px;
+}
+.ViewBookRow .CustomDiv p{
+    font-weight: 800;
+    font-size: 20px;
+
+}
+.ViewBookRow .CustomDiv p span{
+    color:var(--main);
+    font-weight: 800;
+    border-bottom: 0.1px dashed var(--main);
+
+}
+
+.ViewBookRow .Details{
+    
+    padding: 10px;
+
+
+}
+.Details p{
+    font-weight: 800;
+    font-size: 12px;
+}
+.Details p span{
+    color: var(--main);
+
+}
+.ViewBtn{
+    background: var(--main);
+    border-radius: 999px;
+    padding: 6px 16px;
+    color: #fff;
+    font-weight: 800;
+    position: absolute;
+}
